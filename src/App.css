@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+img {
+  width: 10rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+}
