@@ -1,12 +1,73 @@
 .App {
   text-align: center;
+  font-size: 32px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-img {
+.card img {
   width: 10rem;
 }
 
 .list {
   display: flex;
   justify-content: space-around;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  gap: 4rem;
+  height: 4rem;
+  background: #61C9A8;
+  
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  width: 25%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1rem solid #61C9A8;
+  border-radius: 1rem;
+}
+
+input {
+  width: 8rem;
+  padding: 1rem;
+  background: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart {
+  width: 70%;
+  height: 40rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1rem solid #61C9A8;
+  border-radius: 1rem;
+}
+
+.cart img {
+  width: 5rem;
+}
+
+.cart-row {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
