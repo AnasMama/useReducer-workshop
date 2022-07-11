@@ -1,6 +1,9 @@
 import React from "react";
 
-const Cart = ({ cartList, cartPrice }) => {
+const Cart = ({ cartList }) => {
+  let cartPrice = 0;
+  cartList.forEach(product => cartPrice += product.quantity * product.price)
+
   return (
     <div className="cart">
       {cartList

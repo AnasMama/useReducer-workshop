@@ -1,16 +1,16 @@
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./App.css";
 import Cart from "./components/Cart";
 import NavBar from "./components/NavBar";
 import ProductList from "./components/ProductList";
 import { products } from "./components/products";
+import { reducer } from "./reducer";
 
 const initialCart = products.map((fruit) => ({ ...fruit, quantity: 0 }));
 
 function App() {
-  const [cartList, setCartList] = useState(initialCart);
-  const [cartPrice, setCartPrice] = useState(0);
+  const [cartList, dispatch] = useReducer(reducer, initialCart); 
 
   return (
     <Router>
@@ -22,15 +22,13 @@ function App() {
             element={
               <ProductList
                 cartList={cartList}
-                setCartList={setCartList}
-                cartPrice={cartPrice}
-                setCartPrice={setCartPrice}
+                dispatch={dispatch}
               />
             }
           />
           <Route
             path="/panier"
-            element={<Cart cartList={cartList} cartPrice={cartPrice} />}
+            element={<Cart cartList={cartList}/>}
           />
         </Routes>
       </div>
